@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 50px;
+        }
+
+        .test {
+            width: 300px;
+            height: 300px;
+            border: 1em solid currentColor;
+        }
+
+        .div-img {
+            color: red;
+            font-size: 1px;
+        }
+
+        .test2 {
+            width: 300px;
+            height: 300px;
+            border: 1em solid rebeccapurple;
+        }
+
+        .testbutton {
+            padding: 0.3em 0.3em;
+            border: 1px solid #446d88;
+            background: #58a linear-gradient(#77a0bb, #58a);
+            border-radius: 0.2em;
+            box-shadow: 0 1px 5px gray;
+            color: white;
+            text-shadow: 0 -1px 1px #335166;
+            font-size: 125%;
+            line-height: 1.5;
+        }
+
+        .box {
+            background-color: green;
+            /* overflow: auto; */
+        }
+
+        /* .box::after {
+            content: "";
+            display: block;
+            clear: both;
+        } */
+
+        .box::before,
+        .box::after {
+            content: ".";
+            clear: both;
+            display: block;
+            visibility: hidden;
+            overflow: hidden;
+            height: 0;
+            /* *zoom: 1; */
+        }
+
+        /* .box:after {
+            
+        } */
+
+        .box {
+            /* *zoom: 1; */
+        }
+
+        .float {
+            float: left;
+            width: 100px;
+            height: 150px;
+            background: rgba(255, 0, 0, 0.3);
+            padding: 10px;
+            box-shadow: 10px 10px 5px yellow;
+        }
+
+        .blue,
+        .green-inner {
+            height: 50px;
+            margin: 10px 0;
+        }
+        .green-inner{
+            background-color: green;
+        }
+        .blue {
+            background: blue;
+        }
+
+        .green-outer {
+            overflow: hidden;
+            background: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div-img">
+        <img class="test" src="./1.jpg" alt="">
+    </div>
+
+    <img class="test2" src="./1.jpg" alt="">
+    <button class="testbutton">ok</button>
+
+    <div class="box">
+
+        <div class="float">我是浮动元素, 带透明背景色</div>
+        <div>我在标准元素内</div>
+
+    </div>
+
+    <div class="blue">我下外边距50px</div>
+    
+    <div class="green-outer">
+        <div class="green-inner">我上外边距50px</div>
+    </div>
+
+</body>
+
+</html>

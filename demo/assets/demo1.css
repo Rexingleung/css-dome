@@ -1,0 +1,25 @@
+.pc{
+    margin: 200px;
+    width: 400px;
+    height: 400px;
+    background-color: orange;
+    background-size: cover;
+    overflow: hidden;
+}
+.pc>img{
+    clip-path: polygon(50% 0,100% 50%,50% 100%,0 50%);
+    /* clip-path: circle(40%); */
+    transition: .1s clip-path;
+}
+.pc > img:hover{
+    clip-path: polygon(0 0,100% 0%,100% 100%,0 100%);
+}
+.test1{
+    height: 100px;
+    width: 100px;
+    background: green;
+    transition: all 1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+.test1:hover {
+    transform: matrix(1,0,0,1,300,0)
+}
